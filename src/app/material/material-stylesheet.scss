@@ -1,0 +1,27 @@
+@import '~@angular/material/theming';
+@import "../styles/common";
+@include mat-core();
+
+$app-primary: mat-palette($app-theme, 100);
+$app-accent: mat-palette($app-theme, 200);
+$app-warn: mat-palette($app-theme, 300);
+
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+@include mat-core-theme($app-theme);
+@include mat-card-theme($app-theme);
+@include mat-dialog-theme($app-theme);
+@include mat-select-theme($app-theme);
+@include mat-input-theme($app-theme);
+@include mat-progress-bar-theme($app-theme);
+@include mat-datepicker-theme($app-theme);
+@include mat-form-field-theme($app-theme);
+@include mat-button-theme($app-theme);
+@include mat-checkbox-theme($app-theme);
+@include mat-slide-toggle-theme($app-theme);
+@include mat-radio-theme($app-theme);
+@include mat-tooltip-theme($app-theme);
+@include mat-autocomplete-theme($app-theme);
+@include mat-tabs-theme($app-theme);
+@include mat-sidenav-theme($app-theme);
+@include mat-toolbar-theme($app-theme);
