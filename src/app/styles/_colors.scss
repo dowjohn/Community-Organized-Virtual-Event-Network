@@ -1,8 +1,16 @@
+$orangcycle: #F78154;
+$yellowburst: #F2C14E;
+$limon: #5FAD56;
+$gripeygreen: #4D9078;
+$mildyupsetpurple: #B4436C;
+$warningpink: #EF476F;
+$bluegraybackground: #26547C;
+
 $app-theme: (
-    50: red,
-    100 : orange,
-    200 : green,
-    300 : coral,
+    50 : $orangcycle,
+    100 : $mildyupsetpurple,
+    200 : $orangcycle,
+    300 : $warningpink,
     400 : violet,
     500 : blue,
     600 : white,

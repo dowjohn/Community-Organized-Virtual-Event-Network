@@ -10,7 +10,17 @@ import { Subscription } from 'rxjs';
 export class SubscriberBaseComponent implements OnDestroy {
     subscriptions: Subscription[] = [];
 
-    ngOnDestroy() {
+    /** Add a subscription to the base array */
+    sub(subscription: Subscription) {
+        this.subscriptions.push(subscription);
+    }
+
+    /** Unsubs all subs */
+    unsubAll() {
         this.subscriptions.forEach(sub => sub.unsubscribe());
+    }
+
+    ngOnDestroy() {
+        this.unsubAll();
     }
 }

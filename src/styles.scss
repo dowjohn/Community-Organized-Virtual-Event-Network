@@ -1,3 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import './app/material/material-stylesheet.scss';
-// @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+.mobile-full-width {
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
+}

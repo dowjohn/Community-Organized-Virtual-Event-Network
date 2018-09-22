@@ -14,6 +14,10 @@ const routes: Routes = [
         //     adminGuard
         // ]
     },
+    {
+        path: 'login',
+        loadChildren: './auth/auth.module#AuthModule'
+    },
     // example of guarded component
     // {
     //     path: 'about',

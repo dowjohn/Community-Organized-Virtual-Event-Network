@@ -1,6 +1,27 @@
-import { Component, OnInit } from '@angular/core'
+import { Component, OnInit, ViewChild } from '@angular/core'
 import { MediaService } from './shared/services/media.service'
 import { SubscriberBaseComponent } from './shared/components/base/subscriber-base/subscriber-base.component'
+import { MatSidenav } from '@angular/material/sidenav'
+import { NavigationLink } from './interface/navigation'
+
+const navigationLinks: NavigationLink[] = [
+    {
+        path: '/admin',
+        code: 'admin',
+        enabled: true,
+        show: true,
+        title: 'admin',
+        icon: 'grade'
+    },
+    {
+        path: '/login',
+        code: 'login',
+        enabled: true,
+        show: true,
+        title: 'login',
+        icon: 'create'
+    },
+]
 
 @Component({
     selector: 'app-root',
@@ -9,12 +30,17 @@ import { SubscriberBaseComponent } from './shared/components/base/subscriber-bas
 })
 export class AppComponent extends SubscriberBaseComponent implements OnInit {
     title = 'brewerybuddy'
+    fillerNav = Array.from({ length: 5 }, (_, i) => `Nav Item ${i + 1}`)
+    isMobile = false
+    navigationLinks: NavigationLink[] = navigationLinks
+
+    @ViewChild('sidenav') sidenav: MatSidenav
 
     constructor(public mediaService: MediaService) {
         super()
     }
 
     ngOnInit() {
-        this.mediaService.isHandset.subscribe(isHandset => console.log(isHandset));
+        this.sub(this.mediaService.isMobile.subscribe(is => this.isMobile = is))
     }
 }
