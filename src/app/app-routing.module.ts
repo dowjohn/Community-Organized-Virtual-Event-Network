@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+
 const routes: Routes = [
     {
         path: '',
@@ -17,6 +17,10 @@ const routes: Routes = [
     {
         path: 'login',
         loadChildren: './auth/auth.module#AuthModule'
+    },
+    {
+        path: 'dashboard',
+        loadChildren: './dashboard/dashboard.module#DashboardModule'
     },
     // example of guarded component
     // {

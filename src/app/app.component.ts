@@ -21,6 +21,14 @@ const navigationLinks: NavigationLink[] = [
         title: 'login',
         icon: 'create'
     },
+    {
+        path: '/dashboard',
+        code: 'dashboard',
+        enabled: true,
+        show: true,
+        title: 'dashboard',
+        icon: 'create'
+    },
 ]
 
 @Component({
@@ -30,7 +38,6 @@ const navigationLinks: NavigationLink[] = [
 })
 export class AppComponent extends SubscriberBaseComponent implements OnInit {
     title = 'brewerybuddy'
-    fillerNav = Array.from({ length: 5 }, (_, i) => `Nav Item ${i + 1}`)
     isMobile = false
     navigationLinks: NavigationLink[] = navigationLinks
 

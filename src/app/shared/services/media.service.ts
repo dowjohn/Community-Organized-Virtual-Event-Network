@@ -28,10 +28,8 @@ export class MediaService {
     constructor(private breakpointObserver: BreakpointObserver) {
         this.breakpointObserver.observe([
             Breakpoints.Handset,
-        ]).subscribe(result => {
-            this._isMobile.next(result.matches)
-            console.log(result.matches)
-        })
+        ]).subscribe(result =>
+            this._isMobile.next(result.matches))
 
         this.breakpointObserver.observe([
             Breakpoints.Tablet,

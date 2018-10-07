@@ -36,7 +36,7 @@ export class LoginCardComponent implements OnInit {
     }
 
     buildFormData(): FormCardData {
-        const fg = this.buildLoginForm();
+        const fg = this.buildLoginForm()
         return {
             title: 'Sign In',
             formGroup: fg,
