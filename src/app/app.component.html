@@ -1,7 +1,10 @@
 <div class="container" [class.is-mobile]="isMobile">
     <mat-toolbar color="accent" class="toolbar">
         <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
-        <h1 class="app-name">brewery buddy</h1>
+        <h1 class="app-name">John Dow's Portfolio</h1>
+        <div mat-list-item [routerLink]="nav.path" *ngFor="let nav of navigationLinks">
+            <span *ngIf="!isMobile" class="header-nav-list-item">{{ nav.title }}</span>
+        </div>
     </mat-toolbar>
 
     <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="isMobile ? 56 : 0">

@@ -6,27 +6,19 @@ import { NavigationLink } from './interface/navigation'
 
 const navigationLinks: NavigationLink[] = [
     {
-        path: '/admin',
-        code: 'admin',
-        enabled: true,
-        show: true,
-        title: 'admin',
-        icon: 'grade'
-    },
-    {
-        path: '/login',
-        code: 'login',
-        enabled: true,
-        show: true,
-        title: 'login',
-        icon: 'create'
-    },
-    {
         path: '/dashboard',
         code: 'dashboard',
         enabled: true,
         show: true,
         title: 'dashboard',
+        icon: 'create'
+    },
+    {
+        path: '/contact',
+        code: 'contact',
+        enabled: true,
+        show: true,
+        title: 'contact',
         icon: 'create'
     },
 ]
@@ -37,7 +29,7 @@ const navigationLinks: NavigationLink[] = [
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent extends SubscriberBaseComponent implements OnInit {
-    title = 'brewerybuddy'
+    title = 'portfolio'
     isMobile = false
     navigationLinks: NavigationLink[] = navigationLinks
 

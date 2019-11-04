@@ -1,12 +1,12 @@
 <mat-card class="example-card">
     <mat-card-header>
-        <div mat-card-avatar class="basic-card-header-image"></div>
-        <mat-card-title>Shiba Inu</mat-card-title>
+        <img mat-card-avatar src="{{ cardData.headerImage }}">
+        <mat-card-title>{{ cardData.headerTitle}}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <img mat-card-image src="{{ cardData.cardMainImage }}" alt="{{ cardData.cardMainImageAltText }}">
     <mat-card-content>
         <p>
-            some great info here yup
+            {{ cardData.cardTextBody }}
         </p>
     </mat-card-content>
     <mat-card-actions>

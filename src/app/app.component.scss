@@ -33,3 +33,9 @@ h1.app-name {
      `<body>` to be our scrolling element for mobile layouts. */
   flex: 1 0 auto;
 }
+
+.header-nav-list-item {
+    margin-left: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}

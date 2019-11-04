@@ -16,7 +16,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms'
     exports: [
         SubscriberBaseComponent,
         BasicCardComponent,
-        FormCardComponent
+        FormCardComponent,
+        MaterialModule
     ],
 
     declarations: [SubscriberBaseComponent, BasicCardComponent, FormCardComponent]

@@ -4,23 +4,16 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
     {
         path: '',
-        redirectTo: '',
+        redirectTo: 'dashboard',
         pathMatch: 'full'
-    },
-    {
-        path: 'admin',
-        loadChildren: './admin/admin.module#AdminModule'
-        // canActivate: [
-        //     adminGuard
-        // ]
-    },
-    {
-        path: 'login',
-        loadChildren: './auth/auth.module#AuthModule'
     },
     {
         path: 'dashboard',
         loadChildren: './dashboard/dashboard.module#DashboardModule'
+    },
+    {
+        path: 'contact',
+        loadChildren: './contact/contact.module#ContactModule'
     },
     // example of guarded component
     // {

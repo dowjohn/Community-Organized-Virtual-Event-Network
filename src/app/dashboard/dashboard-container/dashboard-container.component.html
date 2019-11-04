@@ -1,3 +1,19 @@
 <p>
-    cuck
+    Welcome from the cloud!
 </p>
+
+<div *ngFor="let cardData of cardDatas">
+    <basic-card [cardData]="cardData">
+    </basic-card>
+</div>
+
+
+<!-- <mat-grid-list cols="3">
+    <mat-grid-tile
+            *ngFor="let cardData of cardDatas"
+            [colspan]="1"
+            [rowspan]="1">
+        <basic-card [cardData]="cardData">
+        </basic-card>
+    </mat-grid-tile>
+</mat-grid-list> -->

@@ -9,7 +9,8 @@ import { DashboardContainerComponent } from './dashboard-container/dashboard-con
     imports: [
         CommonModule,
         RouterModule.forChild(ROUTES),
-        SharedModule
+        SharedModule,
+
     ],
     declarations: [DashboardContainerComponent]
 })
