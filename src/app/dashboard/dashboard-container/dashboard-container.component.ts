@@ -12,6 +12,7 @@ export class DashboardContainerComponent extends SubscriberBaseComponent impleme
         {
             headerImage: me,
             headerTitle: "Great things incoming!",
+            subTitle: "Greatness comes to those who don't wait",
             cardMainImage: "https://upload.wikimedia.org/wikipedia/commons/a/a9/GrizzlyBearJeanBeaufort.jpg",
             cardMainImageAltText: "image of grizzly bear",
             cardTextBody: `nothing works yet but it might soon`
